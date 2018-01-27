@@ -1,0 +1,16 @@
+<h1><%= @user.name %> Account </h1>
+
+<table>
+	<tr>
+		<th> Name </th>
+		<th> Field</th>
+	</tr>
+	<tr>
+		<td><%= @user.name %></td>
+		<td> <%= @user.field %></td>
+	</tr>
+
+
+</table>
+<%= link_to 'Index of Article', users_path%><br/>
+<%= link_to "Edit", edit_user_path %>

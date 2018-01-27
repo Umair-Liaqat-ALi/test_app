@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 	def create
 		#if you want to display the passed data to create 
 		#action
-		#render plain: params[:article].inspect
+		
 		@article = Article.new(article_params)
 		if @article.save
 		  flash[:notice] = "Article was successfully created"
