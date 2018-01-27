@@ -31,14 +31,27 @@ class ArticlesController < ApplicationController
 		if @article.update(article_params)
 			flash[:notic] = "Article was successfully updated"
 			redirect_to article_path(@article)
+		else
 			render 'edit'
+			
 		end
 
 	end
 
 	def index
 		@articles = Article.all
-		
+
+
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		if @article.destroy
+			flash[:notic] = "Article was successfully deleted"
+            redirect_to articles_path
+        else
+        	render 'index'
+        end
 
 	end
 
