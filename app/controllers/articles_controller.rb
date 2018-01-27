@@ -21,6 +21,27 @@ class ArticlesController < ApplicationController
 
 	end
 
+	def edit
+		@article = Article.find(params[:id])
+
+	end
+
+	def update
+		@article = Article.find(params[:id])
+		if @article.update(article_params)
+			flash[:notic] = "Article was successfully updated"
+			redirect_to article_path(@article)
+			render 'edit'
+		end
+
+	end
+
+	def index
+		@articles = Article.all
+		
+
+	end
+
 
 	private 
 	  def article_params
