@@ -1,5 +1,11 @@
 {
-  "name": "test_app",
+  "name": "zia",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "6.2.2",
+  "description": "anything",
+  "main": "1",
+  "repository": "git@github.com:ZiaHazara/test_app.git",
+  "author": "zia hazara <zhazara123@gmail.com>",
+  "license": "123"
 }
